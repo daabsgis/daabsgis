@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urban Expansion in Adentan Municipality (2000–2026) — DAABS Geospatial</title>
+    <title>Urban Expansion in Adentan Municipality (2000–2026) — DAABS GIS</title>
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABK0lEQVR4nO2bIQoCQRhGd0XTNk9gtIjZM1gVNNpsRsEDCEabzaig1TOYxeJFTAatgujMrDpv2f97+Yd98/gHloVNs3rjnhimQgvQKAAtQKMAtACNAtACNApAC9AoAC1AU6UFPlHbjJwzt+H6q2cUdgN8Dh8y947CBoiFAtACNApAC9AoAC1AYz5AlDfB1u7inDn3mxFMXvn7BvgcPmTu15i/AgpAC9CYD1Do7wF5GfROzpntvp0kSQk3wOfwz3OlCxCKAtACNApAC9AoAC1AYz5A0Jtgdpw5Z66deW4ZAu8N8Dl8yFxRMH8FFIAWoFEAWoBGAWgBGgWgBWgUgBagUQBagMZ8gNT119hiuTrEkonNdDLumt8A8wGcV6DsmN8ABaAFaBSAFqAxH+AB/bgfRj7BnlgAAAAASUVORK5CYII=">
     <style>
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -298,17 +299,35 @@
 
 
 
+        .back-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 49;
+            padding: 5.6rem 2rem 0.85rem;
+            background: rgba(2, 7, 13, 0.92);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(148,163,184,.10);
+            pointer-events: none;
+        }
+        .back-bar .back-link {
+            pointer-events: auto;
+            display: inline-flex; align-items: center; gap: .4rem;
+            color: var(--green); font-size: .85rem; font-weight: 700;
+            text-decoration: none;
+            max-width: 1000px;
+        }
+        .back-bar .back-link:hover { text-decoration: underline; }
         .subpage-hero {
-            padding: 8.5rem 2rem 2rem;
+            padding: 9.5rem 2rem 2rem;
             max-width: 1000px;
             margin: 0 auto;
         }
-        .subpage-hero .back-link {
-            display: inline-flex; align-items: center; gap: .4rem;
-            color: var(--green); font-size: .85rem; font-weight: 700;
-            text-decoration: none; margin-bottom: 1.5rem;
+        .work-page {
+            padding-top: 0.5rem;
         }
-        .subpage-hero .back-link:hover { text-decoration: underline; }
         .projects-list {
             max-width: 1000px;
             margin: 0 auto;
@@ -456,8 +475,8 @@
 <body>
     <nav>
         <div class="nav-container">
-            <a class="nav-brand" href="index.html#home" aria-label="DAABS Geospatial home">
-                <div class="nav-brand-name">DAABS <span>Geospatial</span></div>
+            <a class="nav-brand" href="index.html#home" aria-label="DAABS GIS home">
+                <div class="nav-brand-name">DAABS <span>GIS</span></div>
             </a>
             <div class="nav-menu-wrap">
                 <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-menu">
@@ -466,14 +485,14 @@
                 <div class="nav-links" id="main-menu">
                     <a href="index.html#home">Home</a>
                     <a href="index.html#about">About</a>
-                    <a class="active" href="spatial-analysis.html">Projects</a>
+                    <a class="active" href="explore-expertise.html">Explore expertise</a>
                     <a href="index.html#contact">Contact</a>
                 </div>
             </div>
         </div>
     </nav>
+    <div class="back-bar"><a class="back-link" href="spatial-analysis.html">← Back to Spatial Analysis</a></div>
     <div class="subpage-hero">
-        <a class="back-link" href="spatial-analysis.html">← Back to Spatial Analysis</a>
     </div>
 
     <article class="work-page">
@@ -622,7 +641,7 @@
         </figure>
     </article>
 
-    <footer><p>© 2026 DAABS Geospatial</p></footer>
+    <footer><p>© 2026 DAABS GIS</p></footer>
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
         const navMenu = document.querySelector('.nav-links');
